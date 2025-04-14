@@ -26,7 +26,7 @@ public class Inputer{
             try {
                 return Integer.parseInt(console.readLine());
             } catch (Exception e) {
-                System.err.println("Not valid input, insert an integer");
+                System.err.println("\u001B[31;1m|Not valid input, insert an integer|\u001B[0m");
             } 
         }
     }
@@ -36,7 +36,7 @@ public class Inputer{
             try {
                 return Integer.parseInt(console.readLine(prompt));
             } catch (Exception e) {
-                System.err.println("Not valid input, insert an integer");
+                System.err.println("\u001B[31;1m|Not valid input, insert an integer|\u001B[0m");
             }
         }
     }
@@ -46,7 +46,7 @@ public class Inputer{
             try {
                 return Double.parseDouble(console.readLine());
             } catch (Exception e) {
-                System.err.println("Not valid input, insert a number");
+                System.err.println("\u001B[31;1m|Not valid input, insert a number|\u001B[0m");
             }
         }
     }
@@ -56,7 +56,7 @@ public class Inputer{
             try {
                 return Double.parseDouble(console.readLine(prompt));
             } catch (Exception e) {
-                System.err.println("Not valid input, insert a number");
+                System.err.println("\u001B[31;1m|Not valid input, insert a number|\u001B[0m");
             }
         }
     }

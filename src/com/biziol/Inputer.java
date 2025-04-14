@@ -1,71 +1,90 @@
 package com.biziol;
-import java.io.Console;
-import java.io.Reader;
 
-public class Inputer{
-    private Console console = System.console();
+import java.util.Scanner;
 
-    public String readLine(){
-        return console.readLine();
+public class Inputer {
+    private Scanner scanner = new Scanner(System.in);
+
+    public String readLine() {
+        return scanner.nextLine();
     }
 
-    public String readLine(String prompt){
-        return console.readLine(prompt);
+    public String readLine(String prompt) {
+        System.out.print(prompt);
+        return scanner.nextLine();
     }
 
-    public char[] readPasswd(){
-        return console.readPassword();
-    }
-
-    public char[] readPasswd(String prompt){
-        return console.readPassword(prompt);
-    }
-
-    public Integer readInteger(){
-        while (true) {
-            try {
-                return Integer.parseInt(console.readLine());
-            } catch (Exception e) {
-                System.err.println("\u001B[31;1m|Not valid input, insert an integer|\u001B[0m");
-            } 
+    public String readPassword() {
+        if (System.console() != null) {
+            System.out.print("Password: ");
+            return new String(System.console().readPassword());
+        } else {
+            System.err.println("Warning: This function is only available in a real console. If you are using an IDE like IntelliJ, it will not work because it uses a dummy terminal instead of a real one.");
+            return null;
         }
     }
 
-    public Integer readInteger(String prompt){
+    public String readPassword(String prompt) {
+        if (System.console() != null) {
+            System.out.print(prompt);
+            return new String(System.console().readPassword());
+        } else {
+            System.err.println("Warning: This function is only available in a real console. If you are using an IDE like IntelliJ, it will not work because it uses a dummy terminal instead of a real one.");
+            return null;
+        }
+    }
+
+    public Integer readInteger() {
         while (true) {
             try {
-                return Integer.parseInt(console.readLine(prompt));
-            } catch (Exception e) {
+                return scanner.nextInt();
+            } catch (NumberFormatException e) {
                 System.err.println("\u001B[31;1m|Not valid input, insert an integer|\u001B[0m");
             }
         }
     }
 
-    public Double readDouble(){
+    public Integer readInteger(String prompt) {
+        
         while (true) {
             try {
-                return Double.parseDouble(console.readLine());
-            } catch (Exception e) {
+                System.out.print(prompt);
+                return scanner.nextInt();
+            } catch (NumberFormatException e) {
+                System.err.println("\u001B[31;1m|Not valid input, insert an integer|\u001B[0m");
+                System.out.print(prompt);
+            }
+        }
+    }
+
+    public Double readDouble() {
+        while (true) {
+            try {
+                return scanner.nextDouble();
+            } catch (NumberFormatException e) {
                 System.err.println("\u001B[31;1m|Not valid input, insert a number|\u001B[0m");
             }
         }
     }
 
-    public Double readDouble(String prompt){
+    public Double readDouble(String prompt) {
+        
         while (true) {
             try {
-                return Double.parseDouble(console.readLine(prompt));
-            } catch (Exception e) {
+                System.out.print(prompt);
+                return scanner.nextDouble();
+            } catch (NumberFormatException e) {
                 System.err.println("\u001B[31;1m|Not valid input, insert a number|\u001B[0m");
+                System.out.print(prompt);
             }
         }
     }
 
-    public Reader reader(){
-        return console.reader();
+    public Scanner getScanner(){
+        return scanner;
     }
-    
-    public static void clearScreen() {
+
+    public static void clearConsole() {
         System.out.print("\033[H\033[2J");
         System.out.flush();
     }

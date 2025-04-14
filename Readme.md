@@ -4,7 +4,7 @@ Inputer is located under the directory: "src/com/biziol/Inputer.java"
 Once you have made the changes, compile the class
 
 go to the build folder and run this command: 
-* **`jar cvf ./InputerLibrary.jar bin/com/biziol/Inputer.class`:**
+* **`cd bin && jar cvf ../InputerLibrary.jar com/biziol/Inputer.class`:**
 this will create the library needed by users.
 
 # Inputer Library - User Guide

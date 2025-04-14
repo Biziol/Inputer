@@ -32,8 +32,8 @@ Then, create an instance of the Inputer class:
 ```java
 Inputer inputer = new Inputer();
 ```
-Functions
-# readLine()
+## Functions
+### readLine()
 Description: Reads a line of text from the console.
 
 Return Value: A String containing the line read from the console, or null if the end of the stream is reached.
@@ -45,7 +45,7 @@ String input = inputer.readLine();
 System.out.println("You entered: " + input);
 ```
 
-# readLine(String prompt)
+### readLine(String prompt)
 Description: Displays a prompt and reads a line of text from the console.
 
 Parameters:
@@ -60,7 +60,7 @@ String name = inputer.readLine("Enter your name: ");
 System.out.println("Your name is: " + name);
 ```
 
-# readPasswd()
+### readPasswd()
 Description: Reads a password from the console with echoing disabled.
 
 Return Value: A char[] containing the password, or null if the end of the stream is reached.
@@ -73,7 +73,7 @@ char[] password = inputer.readPasswd();
 java.util.Arrays.fill(password, ' ');
 ```
 
-# readPasswd(String prompt)
+### readPasswd(String prompt)
 Description: Displays a prompt and reads a password from the console with echoing disabled.
 
 Parameters:
@@ -88,7 +88,7 @@ char[] password = inputer.readPasswd("Enter your password: ");
 // Remember to clear the password array after use for security!
 java.util.Arrays.fill(password, ' ');
 ```
-# readInteger()
+### readInteger()
 Description: Reads an integer from the console.
 
 Return Value: An Integer value, or null if the input is not a valid integer.
@@ -104,7 +104,7 @@ if (number != null) {
 }
 ```
 
-# readInteger(String prompt)
+### readInteger(String prompt)
 Description: Displays a prompt and reads an integer from the console.
 
 Parameters:
@@ -123,7 +123,7 @@ if (age != null) {
 }
 ```
 
-# readDouble()
+### readDouble()
 Description: Reads a double from the console.
 
 Return Value: A Double value, or null if the input is not a valid double.
@@ -140,7 +140,7 @@ if (value != null) {
 }
 ```
 
-# readDouble(String prompt)
+### readDouble(String prompt)
 Description: Displays a prompt and reads a double from the console.
 
 Parameters:
@@ -160,7 +160,7 @@ if (price != null) {
 }
 ```
 
-# reader()
+### reader()
 Description: Returns the Reader associated with the console.
 
 Return Value: A Reader object.
@@ -173,7 +173,7 @@ Reader reader = inputer.reader();
 // Use the reader to read input...
 ```
 
-# clearScreen()
+### clearScreen()
 Description: Clears the console screen.
 
 Example:

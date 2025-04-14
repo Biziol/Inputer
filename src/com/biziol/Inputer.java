@@ -31,31 +31,33 @@ public class Inputer{
     }
 
     public Integer readInteger(String prompt){
-        try {
-            return Integer.parseInt(console.readLine(prompt));
-        } catch (Exception e) {
-            System.err.println("Not valid input, insert an integer");
+        while (true) {
+            try {
+                return Integer.parseInt(console.readLine(prompt));
+            } catch (Exception e) {
+                System.err.println("Not valid input, insert an integer");
+            }
         }
-        return null;
     }
 
     public Double readDouble(){
-        try {
-            return Double.parseDouble(console.readLine());
-        } catch (Exception e) {
-            System.err.println("Not valid input, insert a number");
+        while (true) {
+            try {
+                return Double.parseDouble(console.readLine());
+            } catch (Exception e) {
+                System.err.println("Not valid input, insert a number");
+            }
         }
-        return null;
-        
     }
 
     public Double readDouble(String prompt){
-        try {
-            return Double.parseDouble(console.readLine(prompt));
-        } catch (Exception e) {
-            System.err.println("Not valid input, insert a number");
+        while (true) {
+            try {
+                return Double.parseDouble(console.readLine(prompt));
+            } catch (Exception e) {
+                System.err.println("Not valid input, insert a number");
+            }
         }
-        return null;
     }
 
     public Reader reader(){

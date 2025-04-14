@@ -22,12 +22,13 @@ public class Inputer{
     }
 
     public Integer readInteger(){
-        try {
-            return Integer.parseInt(console.readLine());
-        } catch (Exception e) {
-            System.err.println("Not valid input, insert an integer");
+        while (true) {
+            try {
+                return Integer.parseInt(console.readLine());
+            } catch (Exception e) {
+                System.err.println("Not valid input, insert an integer");
+            } 
         }
-        return null;
     }
 
     public Integer readInteger(String prompt){

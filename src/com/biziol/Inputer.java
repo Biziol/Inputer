@@ -36,7 +36,8 @@ public class Inputer {
         while (true) {
             try {
                 return scanner.nextInt();
-            } catch (NumberFormatException e) {
+            } catch (Exception e) {
+                scanner = new Scanner(System.in);
                 System.err.println("\u001B[31;1m|Not valid input, insert an integer|\u001B[0m");
             }
         }
@@ -48,9 +49,9 @@ public class Inputer {
             try {
                 System.out.print(prompt);
                 return scanner.nextInt();
-            } catch (NumberFormatException e) {
+            } catch (Exception e) {
+                scanner = new Scanner(System.in);
                 System.err.println("\u001B[31;1m|Not valid input, insert an integer|\u001B[0m");
-                System.out.print(prompt);
             }
         }
     }
@@ -59,7 +60,8 @@ public class Inputer {
         while (true) {
             try {
                 return scanner.nextDouble();
-            } catch (NumberFormatException e) {
+            } catch (Exception e) {
+                scanner = new Scanner(System.in);
                 System.err.println("\u001B[31;1m|Not valid input, insert a number|\u001B[0m");
             }
         }
@@ -71,9 +73,9 @@ public class Inputer {
             try {
                 System.out.print(prompt);
                 return scanner.nextDouble();
-            } catch (NumberFormatException e) {
+            } catch (Exception e) {
+                scanner = new Scanner(System.in);
                 System.err.println("\u001B[31;1m|Not valid input, insert a number|\u001B[0m");
-                System.out.print(prompt);
             }
         }
     }

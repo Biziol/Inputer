@@ -16,7 +16,6 @@ public class Inputer {
 
     public String readPassword() {
         if (System.console() != null) {
-            System.out.print("Password: ");
             return new String(System.console().readPassword());
         } else {
             System.err.println("Warning: This function is only available in a real console. If you are using an IDE like IntelliJ, it will not work because it uses a dummy terminal instead of a real one.");
@@ -26,8 +25,7 @@ public class Inputer {
 
     public String readPassword(String prompt) {
         if (System.console() != null) {
-            System.out.print(prompt);
-            return new String(System.console().readPassword());
+            return new String(System.console().readPassword(prompt));
         } else {
             System.err.println("Warning: This function is only available in a real console. If you are using an IDE like IntelliJ, it will not work because it uses a dummy terminal instead of a real one.");
             return null;

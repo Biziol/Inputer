@@ -33,17 +33,6 @@ Then, create an instance of the Inputer class:
 Inputer inputer = new Inputer();
 ```
 ## Functions
-### readLine()
-Description: Reads a line of text from the console.
-
-Return Value: A String containing the line read from the console, or null if the end of the stream is reached.
-
-**Example:**
-
-```java
-String input = inputer.readLine();
-System.out.println("You entered: " + input);
-```
 
 ### readLine(String prompt)
 Description: Displays a prompt and reads a line of text from the console.
@@ -58,50 +47,6 @@ Return Value: A String containing the line read from the console, or null if the
 ```java
 String name = inputer.readLine("Enter your name: ");
 System.out.println("Your name is: " + name);
-```
-
-### readPasswd()
-Description: Reads a password from the console with echoing disabled.
-
-Return Value: A char[] containing the password, or null if the end of the stream is reached.
-
-**Example:**
-
-```java
-char[] password = inputer.readPasswd();
-// Remember to clear the password array after use for security!
-java.util.Arrays.fill(password, ' ');
-```
-
-### readPasswd(String prompt)
-Description: Displays a prompt and reads a password from the console with echoing disabled.
-
-Parameters:
-
-prompt (String): The prompt to display to the user.
-Return Value: A char[] containing the password, or null if the end of the stream is reached.
-
-**Example:**
-
-```java
-char[] password = inputer.readPasswd("Enter your password: ");
-// Remember to clear the password array after use for security!
-java.util.Arrays.fill(password, ' ');
-```
-### readInteger()
-Description: Reads an integer from the console.
-
-Return Value: An Integer value, or null if the input is not a valid integer.
-
-Error Handling: If the input is not a valid integer, an error message is printed to System.err.
-
-**Example:**
-
-```java
-Integer number = inputer.readInteger();
-if (number != null) {
-    System.out.println("You entered: " + number);
-}
 ```
 
 ### readInteger(String prompt)
@@ -123,23 +68,6 @@ if (age != null) {
 }
 ```
 
-### readDouble()
-Description: Reads a double from the console.
-
-Return Value: A Double value, or null if the input is not a valid double.
-
-Error Handling: If the input is not a valid double, an error message is printed to System.err.
-
-Example:
-
-```Java
-
-Double value = inputer.readDouble();
-if (value != null) {
-    System.out.println("You entered: " + value);
-}
-```
-
 ### readDouble(String prompt)
 Description: Displays a prompt and reads a double from the console.
 
@@ -154,23 +82,10 @@ Example:
 
 ```Java
 
-Double price = inputer.readDouble("Enter the price: ");
+Double price = inputer.readDouble("Enter the price");
 if (price != null) {
     System.out.println("The price is: " + price);
 }
-```
-
-### reader()
-Description: Returns the Reader associated with the console.
-
-Return Value: A Reader object.
-
-Example:
-
-```Java
-
-Reader reader = inputer.reader();
-// Use the reader to read input...
 ```
 
 ### clearScreen()

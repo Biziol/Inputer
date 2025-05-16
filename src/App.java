@@ -12,5 +12,8 @@ public class App {
 
         Double numDouble = in.readDouble("insert a Double number: ");
         System.out.println("The inserted Double is: " + numDouble);
+
+        String string = in.readLine("string test");
+        System.out.println("The inserted Double is: " + string);
     }
 }

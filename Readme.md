@@ -45,8 +45,8 @@ Return Value: A String containing the line read from the console, or null if the
 **Example:**
 
 ```java
-String name = inputer.readLine("Enter your name: ");
-System.out.println("Your name is: " + name);
+String name = inputer.readLine("Enter your name");
+output: Enter your name -->
 ```
 
 ### readInteger(String prompt)
@@ -62,10 +62,8 @@ Error Handling: If the input is not a valid integer, an error message is printed
 **Example:**
 
 ```java
-Integer age = inputer.readInteger("Enter your age: ");
-if (age != null) {
-    System.out.println("Your age is: " + age);
-}
+Integer age = inputer.readInteger("Enter your age");
+output: Enter your age -->
 ```
 
 ### readDouble(String prompt)
@@ -83,9 +81,7 @@ Example:
 ```Java
 
 Double price = inputer.readDouble("Enter the price");
-if (price != null) {
-    System.out.println("The price is: " + price);
-}
+output: Enter your price -->
 ```
 
 ### clearScreen()

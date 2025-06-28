@@ -81,7 +81,7 @@ Example:
 ```Java
 
 Double price = inputer.readDouble("Enter the price");
-output: Enter your price -->
+output: Enter the price -->
 ```
 
 ### clearScreen()
